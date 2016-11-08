@@ -1,0 +1,497 @@
+@import 'common';
+#nav-section {
+    height: 50px;
+    background-color: $primary-color-dark;
+    font-size: 16px;
+    #logo {
+        line-height: 50px;
+        color: $primary-color-text;
+        display: inline-block;
+        margin-left: 30px;
+    }
+    #menu-wrap {
+        position: relative;
+        display: inline-block;
+        float: right;
+        margin-right: 10px;
+        #menu-trigger {
+            display: inline-block;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+            padding: 0 35px 0 0;
+            color: #fff;
+            border-radius: 6px;
+            background: url(../images/menu.png) no-repeat 10px center;
+        }
+        #menu {
+            background: $primary-color-light;
+            width: 100px;
+            margin: 0;
+            padding: 10px;
+            position: absolute;
+            top: 40px;
+            right: -10px;
+            z-index: 1;
+            display: none;
+            box-shadow: none;
+            li {
+                text-align: center;
+                position: static;
+                display: block;
+                float: none;
+                border: 0;
+                box-shadow: none;
+                background: none !important;
+                margin-top: 5px;
+                a {
+                    color: $secondary-text-color;
+                }
+            }
+        }
+        @media (min-width: 680px) {
+            #nav-section {
+                position: fixed;
+                .container {
+                    width: 50% !important;
+                }
+            }
+            #menu-trigger {
+                display: none;
+            }
+            
+            #menu {
+                position: relative;
+                display: inline-block;
+                width: auto;
+                top: auto;
+                background: none;
+                padding: 0px;
+                line-height: 40px;
+                margin-right: 10px;
+                li {
+                    float: left;
+                    display: inline-block;
+                    position: relative;
+                    margin-left: 30px;
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.whatido {
+    padding: 20px 0;
+    li {
+        display: block;
+        margin: 0 auto 20px;
+        text-decoration: none;
+        list-style: none;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+    .whatido_whoami {
+        width: 90%;
+        text-align: center;
+        #avatar {
+            display: block;
+            margin: 20px auto;
+            border: 3px solid white;
+            border-radius: 999px;
+            box-shadow: 0 0px 2px 1px $primary-color-dark;
+            width: 150px;
+        }
+        .whatido_whoami_description {
+            text-align: center;
+        }
+    }
+    .whatido_skill {
+        width: 90%;
+        text-align: center;
+        #Frent-end-pic {
+            width: 120px;
+            height: 120px;
+            display: block;
+            margin: 20px auto;
+        }
+        .whatido_skill_description {
+//            font-size: 0.8em;
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        .whatido_whoami,
+        .whatido_skill {
+            height: 250px;
+            width: 70%;
+        }
+        .whatido_whoami {
+            padding-left: 10%; 
+            .whatido_whoami_description,
+            .whatido_whoami_main {
+                display: inline-block;
+                float: left;
+            }
+            .whatido_whoami_main {
+                h3 {
+                    text-align: center;
+                }
+            }
+            .whatido_whoami_description {
+//                margin-top: 30px;
+                text-align: left;
+                width: 45%;
+                margin-left: 20%;
+                font-size: 1.1em;
+            }
+        }
+        .whatido_skill {
+            padding-left: 10%; 
+            .whatido_skill_description,
+            .whatido_skill_main {
+                display: inline-block;
+                float: left;
+            }
+            .whatido_skill_main {
+                margin-left: -40px;
+                h3 {
+                    text-align: center;
+                }
+            }
+            .whatido_skill_description {
+                font-size: 1.1em;
+                text-align: left;
+                width: 45%;
+                margin-left: 17%;
+            }
+        }
+    }
+}
+
+#skill-section {
+    padding-bottom: 50px;
+    background-color: $primary-color;
+    color: $primary-color-text;
+    height: auto;
+    width: 100%;
+    .skill-title {
+        width: 300px;
+        margin: 0 auto;
+        padding-top: 30px;
+        text-align: center;
+    }
+    .skills {
+        width: 90%;
+        padding: 40px;
+        text-align: center;
+        margin: 0 auto;
+        ul {
+            display: block;
+            height: auto;
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-bottom: 50px;
+            border: 1px solid #FFFFFF;
+            font-size: 15px;
+            text-align: center;
+            vertical-align: top;
+            padding: 0px 0px;
+            li {
+                text-align: center;
+                padding: 10px 0;
+            }
+            li:first-child {
+                background-color: #FFFFFF;
+                color: #333;
+            }
+            li:hover {
+                background-color: #FFFFFF;
+                color: #333;
+                cursor: default;
+            }
+        }
+        .skill-lang {
+            margin-left: 2%;
+        }
+        .skill-tech {
+            margin-right: 2%;
+        }
+        
+    }
+    @media (min-width: 768px) {
+        padding-top: 20px;
+        .skills {
+            padding-top: 60px;
+            text-align: center;
+            ul {
+//                margin-left: 2%;
+//                margin-right: 2%;
+//                display: inline-block;
+                
+            }
+            .skill-lang {
+                margin-left: 10%;
+            }
+            .skill-tech {
+                margin-right: 10%;
+            }
+        }
+    }
+}
+
+#timeline-section {
+    background-color: #e9f0f5;
+    .timeline-title {
+        width: 300px;
+        margin: 0 auto;
+        padding-top: 30px;
+        text-align: center;
+    }
+    .container {
+        margin: 0 auto;
+        padding-top: 20px;
+        width: 95%;
+        overflow: auto;
+    }
+    #timeline {
+        background: url(../images/line.png) repeat-y;
+        background-position: 32px;
+        margin-top: 40px;
+    }
+    .tl-block {
+        position: relative;
+        min-height: 70px;
+        margin-bottom: 20px;
+        margin-left: 1%;
+        width: 99%;
+    }
+    .tl-year {
+        background: $primary-color;
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        text-align: left;
+        margin: 0;
+        div {
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            padding-top: 23px;
+            margin-left: 13px;
+        }
+    }
+    .tl-event {
+        .event-circle {
+            margin-left: 15px;
+            display: inline-block;
+            background: $primary-color;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+        visibility: visible;
+    }
+    .tl-event > div {
+        width: 80%;
+        position: relative;
+    }
+    .tl-event div div {
+        background: #fff;
+        border-radius: 10px;
+        padding: 15px;
+    }
+    .tl-event div.event-r {
+        float: right;
+        background: url(../images/arrow-left.png) no-repeat 0 0;
+    }
+    .tl-event div.event-r div {
+        margin-left: 20px;
+    }
+    .tl-event time {
+        background: $accent-color;
+        color: #fff;
+        font-size: 12px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .tl-event div.event-l {
+        float: right;
+        background: url(../images/arrow-left.png) no-repeat 0 0;
+    }
+    .tl-event div.event-l div {
+        margin-left: 20px;
+        margin-right: 0;
+    }
+    @media (min-width: 600px) {
+        .container {
+            width: 70%;
+            #timeline {
+                background: url(../images/line.png) repeat-y 50%;
+                margin-bottom: 50px;
+            }
+            .tl-block {
+                width: 100%;
+                margin: 0 auto;
+                margin-left: -32px;
+                .tl-year {
+                    margin-left: 50%;
+                }
+            }
+            .tl-event {
+                width: 100%;
+                margin-left: 16px;
+                margin-top: 10px;
+                .event-circle-r {
+                    margin-left: 50%;
+                }
+                .event-circle-l {
+                    margin-left: 10%;
+                }
+                .event-l,
+                .event-r {
+                    width: 40%;
+                    position: relative;
+                }
+                .event-l {
+                    padding-right: 20px;
+                    float: left;
+                    background: url(../images/arrow-right.png) no-repeat top right;
+                }
+            }
+        }
+    }
+}
+
+#projectjExp-section {
+    background-color: $primary-color;
+    color: $primary-color-text;
+    height: auto;
+    width: 100%;
+    .projectEXP-title {
+        width: 300px;
+        margin: 0 auto;
+        padding-top: 30px;
+        text-align: center;
+    }
+    .projectjExp_list {
+        margin-top: 50px;
+    }
+    li {
+        text-align: left;
+        display: block;
+        margin-bottom: 50px;
+        img {
+            width: 150px;
+            display: block;
+            float: none;
+            margin: 0 auto;
+            border: 3px solid #E1E1E1;
+            border-radius: 999px;
+            box-shadow: 0 0px 2px 1px $primary-color-dark;
+        }
+    }
+    .projectjExp_list_description {
+        text-align: center;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 90%;
+        h3 {
+            margin-top: 0px;
+            margin-bottom: 20px;
+            color: black;
+        }
+        .projectjExp_list_title {
+            margin-top: 0px;
+            padding: 1px;
+            font-weight: 900;
+        }
+        b {
+            border-radius: 3px;
+            background-color: $accent-color;
+        }
+    }
+    @media (min-width: 900px) {
+        padding-top: 50px;
+        padding-bottom: 100px;
+        .projectjExp_list_description {
+            h3{
+                margin-top: 20px;
+            }
+        }
+        .projectjExp_list {
+            margin-top: 100px;
+            li{
+                width: 33%;
+                float: left;
+            }
+        }
+    }
+}
+
+#contactme-section {
+    color: $primary-text-color;
+    text-align: center;
+    .contactme-title {
+        width: 500px;
+        margin: 0 auto;
+        padding-top: 30px;
+        text-align: center;
+    }
+    div {
+        position: relative;
+        margin: 30px auto;
+        width: 100%;
+        font-size: 20px;
+        a {
+            display: block;
+            margin-bottom: 30px;
+            color: $primary-text-color;
+            
+            img {
+                margin: 0 auto;
+                display: block;
+                width: 150px;
+                margin-bottom: 10px;
+            }
+            
+        }
+        b {
+                color: $accent-color;
+                opacity: 0.8;
+        }
+    }
+    @media (min-width: 700px) {
+        .contactme-title {
+            margin-top: 100px;
+            width: auto;
+        }
+        #howtocontactme {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            div {
+                width: 35%;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    background-color: #0097a7;
+}
